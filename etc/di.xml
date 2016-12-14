@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Checkout\Api\PaymentInformationManagementInterface">
+        <plugin name="validate" type="METMEER\CustomerComment\Plugin\Model\Checkout\Validation"/>
+    </type>
+    <type name="Magento\Checkout\Api\GuestPaymentInformationManagementInterface">
+        <plugin name="guest-validate" type="METMEER\CustomerComment\Plugin\Model\Checkout\GuestValidation"/>
+    </type>
+    <type name="Magento\Sales\Block\Adminhtml\Order\View\Tab\Info">
+        <plugin name="sales-order-view-customer-comment" type="METMEER\CustomerComment\Plugin\Block\Adminhtml\Order\View\Tab\Info"/>
+    </type>
+</config>
