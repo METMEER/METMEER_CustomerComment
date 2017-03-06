@@ -4,7 +4,7 @@ namespace METMEER\CustomerComment\Observer;
 use Magento\Framework\Event\Observer as EventObserver;
 use Magento\Framework\Event\ObserverInterface;
 
-class CopyCustomerCommentFromQuoteToOrder implements ObserverInterface
+class SalesModelServiceQuoteSubmitBefore implements ObserverInterface
 {
 	/**
 	 * @param EventObserver $observer
