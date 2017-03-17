@@ -3,4 +3,4 @@ Magento 2 extension for customer order comments in checkout. The extension adds 
 
 ## Installation
 * Download the archive and copy the files to directory app/code/METMEER/CustomerComment.
-* Or, use composer
+* Or, use composer `composer require metmeer/customercomment`
