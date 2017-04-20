@@ -22,11 +22,10 @@ class Info
 
         $block = $this->_blockFactory
             ->createBlock('Magento\Framework\View\Element\Template')
-            ->setTemplate('METMEER_CustomerComment::customer_comment.phtml')
+            ->setTemplate('METMEER_CustomerComment::order/customer_comment.phtml')
+	        ->setCustomerComment($order->getCustomerComment())
         ;
-//		$block = $this->objectManager->create('Magento\Framework\View\Element\Template');
-//		$block->setCustomerComment($order->getCustomerComment());
-//		$block->setTemplate('METMEER_CustomerComment::customer_comment.phtml');
-        return $order->getCustomerComment();
+
+        return $block->toHtml();
     }
 }

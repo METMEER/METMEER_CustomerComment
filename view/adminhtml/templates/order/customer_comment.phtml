@@ -1,3 +1,10 @@
-<hr>
-Customer comment here
-<hr>
+<?php if ($block->getCustomerComment() != '') { ?>
+	<section class="admin__page-section">
+		<div class="admin__page-section-title">
+			<span class="title"><?= __('Customer Comment') ?></span>
+		</div>
+		<div class="admin__page-section-content">
+			<?= $block->getCustomerComment() ?>
+		</div>
+	</section>
+<?php } ?>
