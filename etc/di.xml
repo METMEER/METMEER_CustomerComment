@@ -9,4 +9,7 @@
     <type name="Magento\Sales\Block\Adminhtml\Order\View\Tab\Info">
         <plugin name="sales-order-view-customer-comment" type="METMEER\CustomerComment\Plugin\Block\Adminhtml\Order\View\Tab\Info"/>
     </type>
+    <type name="Magento\Sales\Model\Order">
+        <plugin name="metmeer-customer-comment" type="METMEER\CustomerComment\Plugin\SalesModelOrderPlugin"/>
+    </type>
 </config>
