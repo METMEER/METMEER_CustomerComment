@@ -70,6 +70,10 @@ class GuestValidation
 	 */
 	protected function addCustomerCommentToQuote($cartId, \Magento\Quote\Api\Data\PaymentInterface $paymentMethod)
 	{
+		if (!$paymentMethod->getExtensionAttributes()) {
+			return;
+		}
+
 		$customer_comment = $paymentMethod->getExtensionAttributes()->getCustomerComment();
 		$quoteId = $this->quoteIdMaskFactory->create()->load($cartId, 'masked_id')->getQuoteId();
 		$quote = $this->cartRepository->getActive($quoteId);

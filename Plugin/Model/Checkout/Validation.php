@@ -61,6 +61,10 @@ class Validation
 	 */
 	protected function addCustomerCommentToQuote($cartId, \Magento\Quote\Api\Data\PaymentInterface $paymentMethod)
 	{
+		if (!$paymentMethod->getExtensionAttributes()) {
+			return;
+		}
+
 		$customer_comment = $paymentMethod->getExtensionAttributes()->getCustomerComment();
 		$quote = $this->cartRepository->getActive($cartId);
 
