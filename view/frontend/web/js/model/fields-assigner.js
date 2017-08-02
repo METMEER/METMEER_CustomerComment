@@ -18,7 +18,9 @@ define([
         }
 
         fieldsData.forEach(function (item) {
-            paymentData['extension_attributes'][item.name] = item.value;
+            if (item.value != '') {
+                paymentData['extension_attributes'][item.name] = item.value;
+            }
         });
     };
 });
